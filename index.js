@@ -1,8 +1,9 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const session = require("express-session")
+const {RedisStore} = require("connect-redis")
 const redis = require("redis")
-let RedisStore = require("connect-redis")(session)
+// let RedisStore = require("connect-redis")(session)
 const cors = require("cors")
 const { MONGO_USER, MONGO_PASSWORD, MONGO_IP, MONGO_PORT, REDIS_URL, REDIS_PORT, SESSION_SECRET } = require("./config/config")
 let redisClient = redis.createClient({
