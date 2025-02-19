@@ -1,8 +1,8 @@
 version: "3"
 services:
 nginx:
-    image: nginx
-    ports:
+  image: nginx
+  ports:
       - "80:80"
 node-app:
   build:
